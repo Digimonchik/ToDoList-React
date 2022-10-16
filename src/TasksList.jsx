@@ -6,7 +6,7 @@ const baseUrl = 'https://61e1672f63f8fc0017618b99.mockapi.io/api/v1/tasks'
 
 class TasksList extends Component {
 state = {
-    tasks:  []
+    tasks: []
 
 }
 componentDidMount() {
@@ -40,6 +40,8 @@ deleteTask = (taskId) =>
   fetch(`${baseUrl}/${taskId}`, {
     method: "DELETE",
   });
+
+
 
   updateTask = (taskId, updatedTaskData) =>
   fetch(`${baseUrl}/${taskId}`, {
